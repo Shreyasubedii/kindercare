@@ -3,6 +3,8 @@ import 'package:stacked/stacked.dart';
 import 'package:kindercaremvvm/ui/views/attendance/attendance_view.dart';
 import 'package:kindercaremvvm/ui/views/class_activities/class_activities_view.dart';
 import 'package:kindercaremvvm/ui/views/daily_log/daily_log_view.dart';
+import 'package:kindercaremvvm/ui/views/login_success/login_success_view.dart';
+import 'package:kindercaremvvm/ui/views/dashboard/dashboard_view.dart';
 
 class LoginSuccessViewModel extends BaseViewModel {
 //Tracking the selected tab
@@ -10,18 +12,20 @@ class LoginSuccessViewModel extends BaseViewModel {
   int get selectedIndex => _selectedIndex;
 
   //chaninging tab index
-void setIndex(int index) {
+  void setIndex(int index) {
     _selectedIndex = index;
     notifyListeners();
   }
+
   //Example pages (replace with real view later)
   final List<Widget> _screens = [
-    const Center(child: Text('Home Screen')),
-    const Center(child: Text('Dashboard Screen')),
+    const LoginSuccessView(),
+    const DashboardView(),
     const Center(child: Text('History Screen')),
     const Center(child: Text('Profile Screen')),
   ];
-List<Widget> get screens => _screens;
+  
+  List<Widget> get screens => _screens;
 
 //selectedIndex-> keeps track of which bottom item is selected
 //setIndex()-> updates it and rebuilds the view
@@ -50,7 +54,7 @@ List<Widget> get screens => _screens;
     {
       'title': 'Outdoor Play',
       'subtitle': '2 Activities • 30 mins',
-      'widget': null, 
+      'widget': null,
     },
   ];
 

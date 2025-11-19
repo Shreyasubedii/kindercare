@@ -21,7 +21,7 @@ class DailyLogView extends StackedView<DailyLogViewModel> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 0), 
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
           child: ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(25)),
             child: AppBar(

@@ -96,9 +96,9 @@ class MealTrackView extends StackedView<MealTrackViewModel> {
                         columnSpacing: 25,
                         headingRowHeight: 45,
                         dataRowMinHeight: 40,
-                        columns: const [  
+                        columns: const [
                           DataColumn(
-                            label: Text( 
+                            label: Text(
                               'Name',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class MealTrackView extends StackedView<MealTrackViewModel> {
                           ),
                           DataColumn(
                             label: Text('Full',
-                                style: TextStyle( 
+                                style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black)),
                           ),

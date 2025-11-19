@@ -15,6 +15,8 @@ import 'package:kindercaremvvm/ui/views/meal_track/meal_track_view.dart';
 import 'package:kindercaremvvm/ui/views/naap_track/naap_track_view.dart';
 import 'package:kindercaremvvm/ui/views/mood_track/mood_track_view.dart';
 import 'package:kindercaremvvm/ui/views/health_track/health_track_view.dart';
+import 'package:kindercaremvvm/ui/views/dashboard/dashboard_view.dart';
+import 'package:kindercaremvvm/ui/views/homepage/homepage_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -32,6 +34,8 @@ import 'package:kindercaremvvm/ui/views/health_track/health_track_view.dart';
     MaterialRoute(page: NaapTrackView),
     MaterialRoute(page: MoodTrackView),
     MaterialRoute(page: HealthTrackView),
+    MaterialRoute(page: DashboardView),
+    MaterialRoute(page: HomepageView),
 // @stacked-route
   ],
   dependencies: [

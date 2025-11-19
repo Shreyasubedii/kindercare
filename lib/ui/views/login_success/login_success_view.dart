@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kindercaremvvm/ui/views/attendance/attendance_view.dart';
 import 'package:kindercaremvvm/ui/views/class_activities/class_activities_view.dart';
 import 'package:kindercaremvvm/ui/views/daily_log/daily_log_view.dart';
+import 'package:kindercaremvvm/ui/views/dashboard/dashboard_view.dart';
 import 'package:stacked/stacked.dart';
-
 import 'login_success_viewmodel.dart';
 import 'package:kindercaremvvm/ui/widgets/activity_card.dart';
 
@@ -40,7 +40,7 @@ class LoginSuccessView extends StackedView<LoginSuccessViewModel> {
                       onChanged: viewModel.updateSearchQuery,
                     )
                   : const Text(
-                      "Home",
+                      "",
                       style: TextStyle(color: Colors.black),
                     ),
 

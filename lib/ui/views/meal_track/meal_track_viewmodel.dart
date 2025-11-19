@@ -14,12 +14,12 @@ class MealTrackViewModel extends BaseViewModel {
     'Alex Dsouza',
     'Diana Evans',
     'Ethan Brown',
-  ];  
+  ];
   List<bool> fullSelected = [];
   List<bool> halfSelected = [];
   List<bool> finishedSelected = [];
 
-  MealTrackViewModel(){
+  MealTrackViewModel() {
     initializeStudents();
   }
 

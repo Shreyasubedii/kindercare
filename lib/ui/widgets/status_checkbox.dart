@@ -18,7 +18,7 @@ class StatusCheckbox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Checkbox( 
+        Checkbox(
           value: value,
           activeColor: color,
           shape: RoundedRectangleBorder(
@@ -31,4 +31,3 @@ class StatusCheckbox extends StatelessWidget {
     );
   }
 }
-

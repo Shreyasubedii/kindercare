@@ -5,15 +5,17 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart' as _i15;
+import 'package:flutter/material.dart' as _i17;
 import 'package:flutter/material.dart';
 import 'package:kindercaremvvm/ui/views/attendance/attendance_view.dart' as _i8;
 import 'package:kindercaremvvm/ui/views/class_activities/class_activities_view.dart'
     as _i9;
 import 'package:kindercaremvvm/ui/views/daily_log/daily_log_view.dart' as _i10;
+import 'package:kindercaremvvm/ui/views/dashboard/dashboard_view.dart' as _i15;
 import 'package:kindercaremvvm/ui/views/health_track/health_track_view.dart'
     as _i14;
 import 'package:kindercaremvvm/ui/views/home/home_view.dart' as _i2;
+import 'package:kindercaremvvm/ui/views/homepage/homepage_view.dart' as _i16;
 import 'package:kindercaremvvm/ui/views/login_page/login_page_view.dart' as _i5;
 import 'package:kindercaremvvm/ui/views/login_success/login_success_view.dart'
     as _i6;
@@ -29,7 +31,7 @@ import 'package:kindercaremvvm/ui/views/second_page/second_page_view.dart'
     as _i4;
 import 'package:kindercaremvvm/ui/views/startup/startup_view.dart' as _i3;
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i16;
+import 'package:stacked_services/stacked_services.dart' as _i18;
 
 class Routes {
   static const homeView = '/home-view';
@@ -58,6 +60,10 @@ class Routes {
 
   static const healthTrackView = '/health-track-view';
 
+  static const dashboardView = '/dashboard-view';
+
+  static const homepageView = '/homepage-view';
+
   static const all = <String>{
     homeView,
     startupView,
@@ -72,6 +78,8 @@ class Routes {
     naapTrackView,
     moodTrackView,
     healthTrackView,
+    dashboardView,
+    homepageView,
   };
 }
 
@@ -129,84 +137,104 @@ class StackedRouter extends _i1.RouterBase {
       Routes.healthTrackView,
       page: _i14.HealthTrackView,
     ),
+    _i1.RouteDef(
+      Routes.dashboardView,
+      page: _i15.DashboardView,
+    ),
+    _i1.RouteDef(
+      Routes.homepageView,
+      page: _i16.HomepageView,
+    ),
   ];
 
   final _pagesMap = <Type, _i1.StackedRouteFactory>{
     _i2.HomeView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i2.HomeView(),
         settings: data,
       );
     },
     _i3.StartupView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i3.StartupView(),
         settings: data,
       );
     },
     _i4.SecondPageView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i4.SecondPageView(),
         settings: data,
       );
     },
     _i5.LoginPageView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i5.LoginPageView(),
         settings: data,
       );
     },
     _i6.LoginSuccessView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i6.LoginSuccessView(),
         settings: data,
       );
     },
     _i7.PasswordResetView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i7.PasswordResetView(),
         settings: data,
       );
     },
     _i8.AttendanceView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i8.AttendanceView(),
         settings: data,
       );
     },
     _i9.ClassActivitiesView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i9.ClassActivitiesView(),
         settings: data,
       );
     },
     _i10.DailyLogView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i10.DailyLogView(),
         settings: data,
       );
     },
     _i11.MealTrackView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i11.MealTrackView(),
         settings: data,
       );
     },
     _i12.NaapTrackView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i12.NaapTrackView(),
         settings: data,
       );
     },
     _i13.MoodTrackView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i13.MoodTrackView(),
         settings: data,
       );
     },
     _i14.HealthTrackView: (data) {
-      return _i15.MaterialPageRoute<dynamic>(
+      return _i17.MaterialPageRoute<dynamic>(
         builder: (context) => const _i14.HealthTrackView(),
+        settings: data,
+      );
+    },
+    _i15.DashboardView: (data) {
+      return _i17.MaterialPageRoute<dynamic>(
+        builder: (context) => const _i15.DashboardView(),
+        settings: data,
+      );
+    },
+    _i16.HomepageView: (data) {
+      return _i17.MaterialPageRoute<dynamic>(
+        builder: (context) => const _i16.HomepageView(),
         settings: data,
       );
     },
@@ -219,7 +247,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i16.NavigationService {
+extension NavigatorStateExtension on _i18.NavigationService {
   Future<dynamic> navigateToHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -402,6 +430,34 @@ extension NavigatorStateExtension on _i16.NavigationService {
         transition: transition);
   }
 
+  Future<dynamic> navigateToDashboardView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.dashboardView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> navigateToHomepageView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.homepageView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
   Future<dynamic> replaceWithHomeView([
     int? routerId,
     bool preventDuplicates = true,
@@ -578,6 +634,34 @@ extension NavigatorStateExtension on _i16.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.healthTrackView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithDashboardView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.dashboardView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithHomepageView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.homepageView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

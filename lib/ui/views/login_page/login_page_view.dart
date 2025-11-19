@@ -174,7 +174,7 @@ class LoginPageView extends StackedView<LoginPageViewModel> {
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
                             // Process data.
-                            Navigator.push( 
+                            Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) => const LoginSuccessView(),

@@ -4,7 +4,6 @@ import 'package:kindercaremvvm/ui/widgets/activity_card.dart';
 import 'attendance_viewmodel.dart';
 import 'package:kindercaremvvm/ui/widgets/attendance_inoutcheck.dart';
 
-
 class AttendanceView extends StackedView<AttendanceViewModel> {
   const AttendanceView({Key? key}) : super(key: key);
 

@@ -19,9 +19,9 @@ class LoginSuccessView extends StackedView<LoginSuccessViewModel> {
     return Scaffold(
       backgroundColor: Colors.blue[800],
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(65),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 10),
           child: ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(25)),
             child: AppBar(
@@ -117,8 +117,8 @@ class LoginSuccessView extends StackedView<LoginSuccessViewModel> {
                 label: 'Dashboard',
               ),
               const BottomNavigationBarItem(
-                icon: Icon(Icons.history),
-                label: 'History',
+                icon: Icon(Icons.message),
+                label: 'Messages',
               ),
               const BottomNavigationBarItem(
                 icon: Icon(Icons.person),

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kindercaremvvm/models/teacherProfileModel.dart';
+import 'package:kindercaremvvm/ui/views/messages/messages_view.dart';
+import 'package:kindercaremvvm/ui/views/teacherprofile/teacherprofile_view.dart';
 import 'package:stacked/stacked.dart';
 import 'package:kindercaremvvm/ui/views/attendance/attendance_view.dart';
 import 'package:kindercaremvvm/ui/views/class_activities/class_activities_view.dart';
@@ -21,10 +24,10 @@ class LoginSuccessViewModel extends BaseViewModel {
   final List<Widget> _screens = [
     const LoginSuccessView(),
     const DashboardView(),
-    const Center(child: Text('History Screen')),
-    const Center(child: Text('Profile Screen')),
+    const MessagesView(),
+    const TeacherProfileView(),
   ];
-  
+
   List<Widget> get screens => _screens;
 
 //selectedIndex-> keeps track of which bottom item is selected
